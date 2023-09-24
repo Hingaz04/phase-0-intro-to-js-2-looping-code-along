@@ -1,13 +1,24 @@
-function countDown(enterednumber) {
-  if (enterednumber <= 0 || !Number.isInteger(enteredumber)) {
-    console.log("Please provide a positive integer as input.");
-    return;
+function writeCards(names, eventName) {
+  const thankYouMessages = [];
+
+  for (let i = 0; i < names.length; i++) {
+    
+    const message = `Thank you, ${names[i]}, for the wonderful ${eventName} gift!`;
+    thankYouMessages.push(message);
   }
- while (enterednumber >= 0) {
-    console.log(enterednumber);
-    enterednumber--;
+
+  return thankYouMessages; 
+}
+
+
+function countDown(number) {
+  while (number >= 0) {
+    console.log(number);
+    number--;
   }
 }
+
+countDown(10);
 
 
 
